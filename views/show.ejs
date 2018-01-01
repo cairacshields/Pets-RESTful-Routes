@@ -1,0 +1,43 @@
+<% include partials/header %>
+
+
+	<h1 class="ui huge green center aligned header">Adopt <%=data.name%></h1>
+	<div clas="ui divider"></div>
+
+<div class="ui main text container segment">
+
+	
+	<div class="ui small statistics">
+  		<div class="statistic">
+		    <div class="value">
+		      <%=data.breed%>
+		    </div>
+		    <div class="label">
+		      Breed
+		    </div>
+		  </div>
+		  <div class="statistic">
+		    <div class="text value">
+		      <%=data.age%>
+		    </div>
+		    <div class="label">
+		      Age
+		    </div>
+		  </div>
+		  <div class="statistic">
+		    <div class="value">
+		      <i class="plane icon"></i> <%=data.location%>
+		    </div>
+		    <div class="label">
+		      Location
+		    </div>
+		  </div>
+		</div>
+	<img class="ui centered fluid image" src="<%=data.image%>">
+	<a href="/pets/<%=data._id%>/edit" id="delete" class="ui teal basic button">Update this Animal </a>
+	<form action="/pets/<%=data._id%>?_method=DELETE" method="POST" id="delete"> <button class="ui red basic button"> Delete Animal </button></form>
+</div>
+
+
+
+<% include partials/footer %>

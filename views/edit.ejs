@@ -1,0 +1,32 @@
+<% include partials/header %>
+
+<div class="ui main text container segment">
+	<h1 class="ui huge header"> Edit Your pet in the database! </h1>
+	<div class="ui divider"></div>
+	<form action="/pets/<%=data._id%>?_method=PUT" method="POST" class="ui form">
+	  <div class="field">
+	    <label>Pet's Name</label>
+	    <input type="text" name="pet[name]" placeholder="Name" value="<%=data.name%>">
+	  </div>
+	  <div class="field">
+	    <label>Breed</label>
+	    <input type="text" name="pet[breed]" placeholder="Breed" value="<%=data.breed%>">
+	  </div>
+	  <div class="field">
+	    <label>Location</label>
+	    <input type="text" name="pet[location]" placeholder="Location" value="<%=data.location%>">
+	  </div>
+	  <div class="field">
+	    <label>Age</label>
+	    <input type="text" name="pet[age]" placeholder="Pet's Age" value="<%=data.age%>">
+	  </div>
+	  <div class="field">
+	    <label>Image</label>
+	    <input type="text" name="pet[image]" placeholder="Pet's Picture" value="<%=data.image%>">
+	  </div>
+	  <button class="ui green basic button" type="submit">Update</button>
+	</form>
+</div>
+
+
+<% include partials/footer %>
